@@ -1,19 +1,25 @@
 # Designing-Kalman-filters
-Repo contains workflow for designing Kalman filters
-
+- Repo contains workflow for designing Kalman filters.
+- Entire work can be seen as a summarization of the [excellent book / repo by Roger Labbe](https://github.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python)
+- Case studies on how to apply the KF workflow to practical problems are presented
 
 ## Table of contents
-- [Chapter 1: The g-h Filter](Chapter1_summary)
-- Chapter 2: The Discrete Bayes Filter
-Chapter 3: Probabilities, Gaussians, and Bayes' Theorem
+- [Design Worflow for Kalman filters](Design_workflows_for_Kalman_filters.md)
+- [CASE STUDIES](case_studies/README.md)
+    - [Robot locaization Case Study](case_studies/Robot_localization.md)
+- [Book Summary](#book-summary)
+    - [Chapter 1: The g-h Filter](Chapter1_summary.md)
+    - [Chapter 2: The Discrete Bayes Filter](Chapter2_summary.md)
+    - [Chapter 3: Probabilities, Gaussians, and Bayes' Theorem](Chapter3_summary.md)
+    - [Chapter 4: One Dimensional Kalman Filters](Chapter4_summary.md)
+    - [Chapter 10:  Unscented Kalman Filters](Chapter10_summary.md)
 
 
 
-Introduces using Gaussians to represent beliefs in the Bayesian sense. Gaussians allow us to implement the algorithms used in the discrete Bayes filter to work in continuous domains.
+## Book Summary
+- Overview of the concepts presented in each chapter has been documented 
 
-Chapter 4: One Dimensional Kalman Filters
 
-Implements a Kalman filter by modifying the discrete Bayes filter to use Gaussians. This is a full featured Kalman filter, albeit only useful for 1D problems.
 
 Chapter 5: Multivariate Gaussians
 
@@ -35,11 +41,7 @@ Chapter 9: Nonlinear Filtering
 
 Kalman filters as covered only work for linear problems. Yet the world is nonlinear. Here I introduce the problems that nonlinear systems pose to the filter, and briefly discuss the various algorithms that we will be learning in subsequent chapters.
 
-Chapter 10: Unscented Kalman Filters
 
-Unscented Kalman filters (UKF) are a recent development in Kalman filter theory. They allow you to filter nonlinear problems without requiring a closed form solution like the Extended Kalman filter requires.
-
-This topic is typically either not mentioned, or glossed over in existing texts, with Extended Kalman filters receiving the bulk of discussion. I put it first because the UKF is much simpler to understand, implement, and the filtering performance is usually as good as or better then the Extended Kalman filter. I always try to implement the UKF first for real world problems, and you should also.
 
 ## References
 - [Page contains all major sources for Kalman filters](https://resourcium.org/index.php/topic/kalman-filter)
