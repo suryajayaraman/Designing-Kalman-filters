@@ -4,17 +4,16 @@
 
 
 ## Points to remember
-- Pg:343: Monte carlo approach for any NL problems But. num points >>>
-- Smart way of choosing sigma points = sampling from distribution 
-- Pg:347-348. Intuition for choosing (2n+1) points , symmetry & mean. Constraints on points weights. intuition behind sigma pts vis.
-- Pg:349-350: Very basic example of unscented Transform, Viz
-- Pg:351-352: UKF equations for any sigma pt method, update + predict step. 
-- Pg:353-359: Van der merwe sigma point selection formula
-- Pg:358 Tracking an airplane problem setting up 
-- Pg:359: NL update functions, angle wrapping (NL) Implementation problem
-- Pg:367: Why complementary sensors give better results in SF?
-- Pg:370-372 Geometry affects 2 bearing sensor fusion
-- Pg:373 + Cholesty decomposition in np.outer usage in matrix square roots
-- Pg:380-381 Choosing sigma points pta in Vardia Merive method 
-- **Pg 384-390 Robot localisation problem. UKF solution particularly handling NL among angles in h(x), f(x), sigma points and and finding weighted mean, cov**
-- Pg : 391 : Pros of UKF over EKF. This is Van der Merw's versio of Julier's uncscneted transform
+- Pg:57, Resources -books - Sebastian Thrun,
+- Pg 58: **Frequentist vs Bayesian. Prior state information Inclusion means Bayesian.**
+- Pg:57-58 setting up of log Tracking problem, hallway setup By:55, 1st measurements door (prior uniform distribution, after 1 meas, 33% on 3 locations)
+- Pg:60, Noisy sensors / not perfect sensors. * Scaling to produce exact prob. distribution)
+- Pg:62, last paragraph - **Likelihood, [How each position is likely to receive measurement]**
+- Pg:64 Incorporating Perfect Movement → Pg:67-68 @ having imperfect sensors, sensor data distribution how prediction reduces our belief.
+- Pg:67 convolve operation introduction for generalisation
+- Pg:71 convolution in stochastic vs deterministic
+- Pg:75, Discrete bayes filter pseudocode.
+- Pg:79, bad sensor data recovery.
+- Pg:79 Drawbacks of diccrete Bayes filter scaling (x O(n^n) where n = state dimension, curese of dimensionality -> not desirable in all cases, 4th = requires change in input state
+- Pg:80 - we control commands for prediction
+- Pg 84 - Bayes theorem and Total prob introduction

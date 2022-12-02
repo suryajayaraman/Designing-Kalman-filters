@@ -1,18 +1,35 @@
-[Chapter 10 Notebook](https://github.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python/blob/master/10-Unscented-Kalman-Filter.ipynb)
-
+## Probabilities, Gaussians, and Bayes' Theorem
+- Introduces using Gaussians to represent beliefs in the Bayesian sense. Gaussians allow us to implement the algorithms used in the discrete Bayes filter to work in continuous domains.
+- [Chapter 3 Notebook](https://github.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python/blob/master/03-Gaussians.ipynb)
 
 ## Points to remember
-- Pg:343: Monte carlo approach for any NL problems But. num points >>>
-- Smart way of choosing sigma points = sampling from distribution 
-- Pg:347-348. Intuition for choosing (2n+1) points , symmetry & mean. Constraints on points weights. intuition behind sigma pts vis.
-- Pg:349-350: Very basic example of unscented Transform, Viz
-- Pg:351-352: UKF equations for any sigma pt method, update + predict step. 
-- Pg:353-359: Van der merwe sigma point selection formula
-- Pg:358 Tracking an airplane problem setting up 
-- Pg:359: NL update functions, angle wrapping (NL) Implementation problem
-- Pg:367: Why complementary sensors give better results in SF?
-- Pg:370-372 Geometry affects 2 bearing sensor fusion
-- Pg:373 + Cholesty decomposition in np.outer usage in matrix square roots
-- Pg:380-381 Choosing sigma points pta in Vardia Merive method 
-- **Pg 384-390 Robot localisation problem. UKF solution particularly handling NL among angles in h(x), f(x), sigma points and and finding weighted mean, cov**
-- Pg : 391 : Pros of UKF over EKF. This is Van der Merw's versio of Julier's uncscneted transform
+- Goal of chapter is to have basis of filter to be continous, unimodal (applicant to many tracking, filtering problems)
+-Pg:88, **Random variable (RV), if O/P of event has multiple outcomes each with own prob, it constitute an RV. (Discrete/ cont. based on sample. 
+- Pg:89-90 **Measure of central tendency (mean, median, mode)**
+- Pg:90 E[X] = Expected vales of Random variable average Value on infinite no. of trials. If all values have equal, Prob then E[x] = mu[x]
+
+![expected_value_cont_formula](images/expected_value_cont_formula.PNG)
+
+
+- Pg:92- Var[x] = how much values are for from mean. Variation among values themselves. Variance is affected by outliers.
+- Pg:93 68% of values lies within (mu ± 1sigma)
+
+![68_95_99.7_rule](images/68_95_99.7_rule.PNG)
+
+- Pg:96 = why square of diff. when computing Var[x](Gauss said it, little arbitary)
+
+- Pg:97=> Gaussian = good solution (Summary stats with just mu and sigma). pdf = prob.denstly function (likelihood for RV to take a a value)
+
+- Pg:99 intro to Gauss distributuions - continous, efficient, easy to work with, nice math properties. f(x) proportional to e^-x2
+
+- Pg:101 => AUC for Gaussian = probability that x is between 2 values. CDF introduction
+- Pg:103 1/Tau = Precision. 68-95-99.7 rule
+
+- Pg:109-110 : p(z) generally difficult to compute analytically. Why Bayes theorem?
+
+
+- Pg:114 Student t distribution used to test Gaussian filters for real world noise
+- Pg:112 Gaussian limitations
+- Pg:115 5sigma vs 3sigma consideration (experimental), skew, kurtosis
+- Pg:116-117 Sum, Product of Gaussian results, summary
+
