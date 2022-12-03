@@ -12,6 +12,7 @@
     - [Chapter 2: The Discrete Bayes Filter](Chapter2_summary.md)
     - [Chapter 3: Probabilities, Gaussians, and Bayes' Theorem](Chapter3_summary.md)
     - [Chapter 4: One Dimensional Kalman Filters](Chapter4_summary.md)
+    - [Chapter 5: Multivariate Gaussians](Chapter5_summary.md)
     - [Chapter 10:  Unscented Kalman Filters](Chapter10_summary.md)
 
 
@@ -21,7 +22,6 @@
 
 
 
-Chapter 5: Multivariate Gaussians
 
 Extends Gaussians to multiple dimensions, and demonstrates how 'triangulation' and hidden variables can vastly improve estimates.
 

@@ -1,18 +1,22 @@
-[Chapter 10 Notebook](https://github.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python/blob/master/10-Unscented-Kalman-Filter.ipynb)
-
+## Chapter 5: Multivariate Gaussians
+- Extends Gaussians to multiple dimensions, and demonstrates how 'triangulation' and hidden variables can vastly improve estimates.
+- [Chapter 5 Notebook](https://github.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python/blob/master/05-Multivariate-Gaussians.ipynb)
 
 ## Points to remember
-- Pg:343: Monte carlo approach for any NL problems But. num points >>>
-- Smart way of choosing sigma points = sampling from distribution 
-- Pg:347-348. Intuition for choosing (2n+1) points , symmetry & mean. Constraints on points weights. intuition behind sigma pts vis.
-- Pg:349-350: Very basic example of unscented Transform, Viz
-- Pg:351-352: UKF equations for any sigma pt method, update + predict step. 
-- Pg:353-359: Van der merwe sigma point selection formula
-- Pg:358 Tracking an airplane problem setting up 
-- Pg:359: NL update functions, angle wrapping (NL) Implementation problem
-- Pg:367: Why complementary sensors give better results in SF?
-- Pg:370-372 Geometry affects 2 bearing sensor fusion
-- Pg:373 + Cholesty decomposition in np.outer usage in matrix square roots
-- Pg:380-381 Choosing sigma points pta in Vardia Merive method 
-- **Pg 384-390 Robot localisation problem. UKF solution particularly handling NL among angles in h(x), f(x), sigma points and and finding weighted mean, cov**
-- Pg : 391 : Pros of UKF over EKF. This is Van der Merw's versio of Julier's uncscneted transform
+-  Multi variate Gaussians captures relationship b/w state variables
+- Pg:156, Correlation & Covariance.
+- Pg:157-158 Cov math formula, how it generalises to variance. Example calculation (covariance)
+- Pg:159 - use of (n-1) variance formula. [population vs sample]
+- Pg:160-161 -> +ve, -ve and no correlation (untilled ellipse in 2D)
+![types_of_correlation](images/types_of_correlation.PNG)
+
+- Pg:162 To find Prob. of being at a point, we integreate surface to calculate volume (2D joint Probabilly)
+- Pg:163 joint vs marginal Probability (Pg:164 sample plot, cut section view)
+- Pg:171 Pearson correlation coefficient
+- Pg:174 - Tracking aircraft using 2 radars uniform distribution (1 sensor update covariance reduces) But and orthogonal sensor: Better ↓ in Variance (consider sensor geometry too) as same direction Sensor would have given lesser reduction in covariance
+![multivariate_gaussian_mutiplication_correlation_implication](images/multivariate_gaussian_mutiplication_correlation_implication.png)
+
+- Pg:178 - Correlation can increase our knowledge of hidden variables. We introduce correlation using F,Q matrices. KF understands this and tries to infer correlation form F, Q
+- Pg:181-182. Assuming CV model = prior (prediction) => correlated. But 2D Position measurement update is uncorrelated. Together they help in reducing Cor. (Whys and hows in Pg:182)
+
+![correlation_improves_hidden_variables_estimates](images/correlation_improves_hidden_variables_estimates.PNG)
