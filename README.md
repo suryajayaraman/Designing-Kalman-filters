@@ -13,6 +13,7 @@
     - [Chapter 3: Probabilities, Gaussians, and Bayes' Theorem](Chapter3_summary.md)
     - [Chapter 4: One Dimensional Kalman Filters](Chapter4_summary.md)
     - [Chapter 5: Multivariate Gaussians](Chapter5_summary.md)
+    - [Chapter 6: Multivariate Kalman Filter](Chapter6_summary.md)
     - [Chapter 10:  Unscented Kalman Filters](Chapter10_summary.md)
 
 
@@ -21,13 +22,6 @@
 - Overview of the concepts presented in each chapter has been documented 
 
 
-
-
-Extends Gaussians to multiple dimensions, and demonstrates how 'triangulation' and hidden variables can vastly improve estimates.
-
-Chapter 6: Multivariate Kalman Filter
-
-We extend the Kalman filter developed in the univariate chapter to the full, generalized filter for linear problems. After reading this you will understand how a Kalman filter works and how to design and implement one for a (linear) problem of your choice.
 
 Chapter 7: Kalman Filter Math
 
