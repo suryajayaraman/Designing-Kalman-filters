@@ -14,6 +14,7 @@
     - [Chapter 4: One Dimensional Kalman Filters](Chapter4_summary.md)
     - [Chapter 5: Multivariate Gaussians](Chapter5_summary.md)
     - [Chapter 6: Multivariate Kalman Filter](Chapter6_summary.md)
+    - [Chapter 7: Kalman Filter Math](Chapter7_summary.md)
     - [Chapter 10:  Unscented Kalman Filters](Chapter10_summary.md)
 
 
@@ -23,9 +24,8 @@
 
 
 
-Chapter 7: Kalman Filter Math
 
-We gotten about as far as we can without forming a strong mathematical foundation. This chapter is optional, especially the first time, but if you intend to write robust, numerically stable filters, or to read the literature, you will need to know the material in this chapter. Some sections will be required to understand the later chapters on nonlinear filtering.
+
 
 Chapter 8: Designing Kalman Filters
 
