@@ -15,6 +15,7 @@
     - [Chapter 5: Multivariate Gaussians](Chapter5_summary.md)
     - [Chapter 6: Multivariate Kalman Filter](Chapter6_summary.md)
     - [Chapter 7: Kalman Filter Math](Chapter7_summary.md)
+    - [Chapter 8: Designing Kalman Filters](Chapter8_summary.md)
     - [Chapter 10:  Unscented Kalman Filters](Chapter10_summary.md)
 
 
@@ -22,14 +23,6 @@
 ## Book Summary
 - Overview of the concepts presented in each chapter has been documented 
 
-
-
-
-
-
-Chapter 8: Designing Kalman Filters
-
-Building on material in Chapters 5 and 6, walks you through the design of several Kalman filters. Only by seeing several different examples can you really grasp all of the theory. Examples are chosen to be realistic, not 'toy' problems to give you a start towards implementing your own filters. Discusses, but does not solve issues like numerical stability.
 
 Chapter 9: Nonlinear Filtering
 
