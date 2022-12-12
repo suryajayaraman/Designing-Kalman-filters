@@ -29,6 +29,14 @@
 - Pg:251 Numerical methods for integrating ODE. Matrix exp and Laplace transform okay for simple linear ODEs. `Complex math models => numerical methods`
 - `x_dot=A*x => X_k = F * X_k-1. Numerical solution using Euler & RK4 methods`
 - Pg:253 Derivative @ Pt. Taylor series 1st term alone used. Simple but delta_t needs to be small to work well or non linear ODEs.
+- Eg : For simple `y=y^2` equation itself, a step size of 1 causes estimates to diverge, while we need >10000 iterations to compute good estimates (< 0.005)
+![Euler_method_gradient_calc](images/Euler_method_gradient_calc.png)
+
 - Pg:254-255, RK4 standard way to integrate ODE's with example" ODES
+- Runge Kutta method formula
+![rk4_formula](images/rk4_formula.PNG)
+- Runge Kutta method example for Non linear problems
+![rk4_example](images/rk4_example.png)
+
 - Pg:256: MDP assumption, Current state is dependent on Prev.
 state and transition prob
