@@ -16,18 +16,13 @@
     - [Chapter 6: Multivariate Kalman Filter](Chapter6_summary.md)
     - [Chapter 7: Kalman Filter Math](Chapter7_summary.md)
     - [Chapter 8: Designing Kalman Filters](Chapter8_summary.md)
-    - [Chapter 10:  Unscented Kalman Filters](Chapter10_summary.md)
+    - [Chapter 9: Nonlinear Filtering](Chapter9_summary.md)
+    - [Chapter 10: Unscented Kalman Filters](Chapter10_summary.md)
 
 
 
 ## Book Summary
 - Overview of the concepts presented in each chapter has been documented 
-
-
-Chapter 9: Nonlinear Filtering
-
-Kalman filters as covered only work for linear problems. Yet the world is nonlinear. Here I introduce the problems that nonlinear systems pose to the filter, and briefly discuss the various algorithms that we will be learning in subsequent chapters.
-
 
 
 ## References
