@@ -1,5 +1,3 @@
-
-import scipy
 import numpy as np
 from scipy.linalg import cholesky
 
@@ -51,6 +49,7 @@ class MerweSigmaPointGenerator:
         sigmaPoints[1:self.n+1, :] = x + P_sqrt
         sigmaPoints[self.n+1:, :]  = x - P_sqrt            
         return sigmaPoints
+
 
 
 if __name__ == "__main__":
