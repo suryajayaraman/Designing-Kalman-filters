@@ -1,4 +1,5 @@
 import numpy as np
+from typing import list
 from sigmaPoints import MerweSigmaPointGenerator
 
 class UnScentedKalmanFilter:
@@ -32,6 +33,11 @@ class UnScentedKalmanFilter:
         self.Q = np.zeros((dim_x, dim_x))
         self.R = np.zeros((dim_z, dim_z))
 
+        # predicted mean and covariance
+        self.xPred = np.zeros_like(self.x)
+        self.PPred = np.zeros_like(self.P)
+
+
 
     def predict(self, u : np.ndarray, *args, **kwargs) -> None:
         """Performs predictions step of Unscented Kalman filter
@@ -46,8 +52,32 @@ class UnScentedKalmanFilter:
 
         # pass sigma points through fx
         for pt in range(sigmaPoints.shape[0]):
-            fxSigmaPoints[pt] = self.fx(sigmaPoints[pt], u, *args, **kwargs)
+            fxSigmaPoints[pt] = self.fx(sigmaPoints[pt], self.dt, u, *args, **kwargs)
 
+        # calculate predicted mean and covariance
+        self.xPred, self.PPred = self.unscentedTransform(fxSigmaPoints)
+
+    def unscentedTransform(self, sigmaPoints : np.ndarray) -> list[np.ndarray]:
+        """_summary_
+
+        Args:
+            sigmaPoints (np.ndarray): _description_
+
+        Raises:
+            NotImplementedError: _description_
+
+        Returns:
+            list[np.ndarray]: _description_
+        """
+
+        if((self.x_mean_fn is not None) and (self.x_mean_fn is callable)):
+            self.xPred = self.x_mean_fn(sigmaPoints, self.sigmaPtGenerator.Wm)
+        else:
+            self.x
+        
+        
+
+        raise NotImplementedError
 
 if __name__ == "__main__":
     np.set_printoptions(suppress=True)
